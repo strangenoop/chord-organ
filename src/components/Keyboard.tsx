@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Tones from "./Tones";
 import { compact } from "lodash";
 import { freq } from "frequencies/piano";
+import Circle from "./Circle";
 
 const Keyboard = () => {
   const [keys, setKeys] = useState<Set<string>>(new Set());
@@ -26,12 +27,31 @@ const Keyboard = () => {
     };
   });
 
+  const freqs = compact([...keys].map(getFreqFromKey));
+
   return (
     <>
-      <div>{keys}</div>
-      <br />
-      <div>
-        <Tones freqs={compact([...keys].map(getFreqFromKey))} />
+      <div
+        style={{
+          color: "black"
+        }}
+      >
+        <div>{keys}</div>
+        <br />
+        <div>
+          <Tones freqs={freqs} />
+        </div>
+      </div>
+      <div
+        style={{
+          position: "fixed",
+          top: `${Math.random() * 100}vh`,
+          left: `${Math.random() * 100}vw`
+        }}
+      >
+        {freqs.map(freq => (
+          <Circle radius={freq / 10} />
+        ))}
       </div>
     </>
   );

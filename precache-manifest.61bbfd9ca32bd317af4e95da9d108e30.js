@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "93826ac131986bf486c46fd58e4c07cc",
+    "revision": "6f67875492a41e34215bf57cad48c697",
     "url": "/chord-organ/index.html"
   },
   {
-    "revision": "dfa9914183549cda1102",
+    "revision": "cb27d9e0e18137747ce5",
     "url": "/chord-organ/static/css/main.b4cd6c73.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chord-organ/static/js/2.522321a0.chunk.js"
   },
   {
-    "revision": "dfa9914183549cda1102",
-    "url": "/chord-organ/static/js/main.affb0782.chunk.js"
+    "revision": "cb27d9e0e18137747ce5",
+    "url": "/chord-organ/static/js/main.bdea3213.chunk.js"
   },
   {
     "revision": "652689c8259ea3c1c46d",

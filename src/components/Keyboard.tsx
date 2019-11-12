@@ -42,15 +42,16 @@ const Keyboard = () => {
           <Tones freqs={freqs} />
         </div>
       </div>
-      <div
-        style={{
-          position: "fixed",
-          top: `${Math.random() * 100}vh`,
-          left: `${Math.random() * 100}vw`
-        }}
-      >
+      <div>
         {freqs.map(freq => (
-          <Circle radius={freq / 10} />
+          <Circle
+            style={{
+              position: "fixed",
+              top: `calc(50vh - ${freq / 10}px)`,
+              left: `calc(50vw - ${freq / 10}px)`
+            }}
+            radius={freq / 10}
+          />
         ))}
       </div>
     </>

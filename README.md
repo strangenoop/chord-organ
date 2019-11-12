@@ -1,5 +1,23 @@
 # Chord Organ
 
+The left hand selects the chord shape, while the right hand selects the root of the chord.
+
+Only one shape may be selected at a time, but several roots can be played together.
+
+## Ideas
+
+Use the number row for sampling.
+
+Use the up/down arrows to change octave.
+
+Hold the space bar for a delay effect.
+
+## Songs
+
+Nikka Costa - Everybody got their something
+Air
+Radiohead - Everything in it's right place, True love waits
+
 ## Resources
 
 http://mmckegg.github.io/web-audio-school/

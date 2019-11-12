@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Tones from "./Tones";
 import { compact } from "lodash";
+import { freq } from "frequencies/piano";
 
-const KeyboardMusic = () => {
+const Keyboard = () => {
   const [keys, setKeys] = useState<Set<string>>(new Set());
   useEffect(() => {
     const addKey = ({ key }: KeyboardEvent) => {
@@ -28,6 +29,7 @@ const KeyboardMusic = () => {
   return (
     <>
       <div>{keys}</div>
+      <br />
       <div>
         <Tones freqs={compact([...keys].map(getFreqFromKey))} />
       </div>
@@ -35,49 +37,21 @@ const KeyboardMusic = () => {
   );
 };
 
-export default KeyboardMusic;
+export default Keyboard;
 
 const getFreqFromKey = (key: string) => {
   return mapKeyToFreq[key] || null;
 };
 
-const multiplier = 2 ** (1 / 12);
-const root = 440;
-
-const fq = (distanceFromRoot: number) => {
-  // Say the key is 3 units away from the root.
-  // We want to multiply the root frequency by the multiplier 3 times.
-  // == (((R * M) * M) * M)
-  // == R * (M * M * M)
-  // == R * (M ** 3)
-  // QUESTION: how does it work for negative distances?
-  return root * multiplier ** distanceFromRoot;
-};
-
-const piano = {
-  b3: 246.9417,
-  c4: 261.6256,
-  d4: 293.6648,
-  e4: 329.6276,
-  f4: 349.2282,
-  g4: 391.9954,
-  as4: fq(1),
-  a4: fq(0),
-  b4: 493.8833,
-  c5: 523.2511,
-  d5: 587.3295,
-  e5: 659.2551
-};
-
 const mapKeyToFreq: { [key: string]: number } = {
-  a: piano.c4,
-  s: piano.d4,
-  d: piano.e4,
-  f: piano.f4,
-  g: piano.g4,
-  h: piano.a4,
-  j: piano.b4,
-  k: piano.c5,
-  l: piano.d5,
-  ";": piano.e5
+  a: freq(4, "c"),
+  s: freq(4, "d"),
+  d: freq(4, "e"),
+  f: freq(4, "f"),
+  g: freq(4, "g"),
+  h: freq(4, "a"),
+  j: freq(4, "b"),
+  k: freq(5, "c"),
+  l: freq(5, "d"),
+  ";": freq(5, "e")
 };

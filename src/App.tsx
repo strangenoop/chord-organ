@@ -1,10 +1,10 @@
 import React from "react";
-import KeyboardMusic from "./KeyboardMusic";
+import Keyboard from "./components/Keyboard";
 
 const App = () => {
   return (
     <div className="App">
-      <KeyboardMusic />
+      <Keyboard />
     </div>
   );
 };

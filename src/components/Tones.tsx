@@ -4,10 +4,7 @@ const Tones = ({ freqs }: { freqs: number[] }) => {
   return (
     <>
       {freqs.map(freq => (
-        <div key={freq}>
-          <Tone freq={freq} detune={-10} />
-          <Tone freq={freq} detune={10} />
-        </div>
+        <Tone freq={freq} />
       ))}
     </>
   );
@@ -35,7 +32,7 @@ const Tone = ({
       osc.stop();
     };
   });
-  return <>{freq}</>;
+  return <div>{freq.toFixed(2)}</div>;
 };
 
 // Setup

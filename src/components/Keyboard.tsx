@@ -67,22 +67,22 @@ const getFreqFromKey = (key: string) => {
 // prettier-ignore
 const mapKeyToFreq: { [key: string]: number } = {
   n   : key("ff", 3),
-  m   : key("g", 3),
+  m   : key("g",  3),
   "," : key("gg", 3),
-  "." : key("a", 3),
+  "." : key("a",  3),
   "/" : key("aa", 3),
-  h   : key("b", 3),
-  j   : key("c", 4),
+  h   : key("b",  3),
+  j   : key("c",  4),
   k   : key("cc", 4),
-  l   : key("d", 4),
+  l   : key("d",  4),
   ";" : key("dd", 4),
-  "'" : key("e", 4),
-  y   : key("f", 4),
+  "'" : key("e",  4),
+  y   : key("f",  4),
   u   : key("ff", 4),
-  i   : key("g", 4),
+  i   : key("g",  4),
   o   : key("gg", 4),
-  p   : key("a", 4),
+  p   : key("a",  4),
   "[" : key("aa", 4),
-  "]" : key("b", 4),
-  "\\": key("c", 4)
+  "]" : key("b",  4),
+  "\\": key("c",  4)
 };

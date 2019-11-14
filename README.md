@@ -1,8 +1,8 @@
 # Chord Organ
 
-The left hand selects the chord shape, while the right hand selects the root of the chord.
+The left hand selects the chord shape while the right hand activates the chord root. Unactivated shapes are added to a queue and matched up with the next root (first in, first out). The queue allows a user to "program" a set of chord shapes before playing them.
 
-Only one shape may be selected at a time, but several roots can be played together.
+You can also select a set of pre-programmed chord shapes.
 
 ## Ideas
 
@@ -10,9 +10,9 @@ Use the number row for sampling.
 
 Use the up/down arrows to change octave.
 
-Hold the space bar for a delay effect.
+Hold the space bar for some kind of effect (delay?).
 
-## Songs
+## Pre-programmed songs
 
 Nikka Costa - Everybody got their something
 Air

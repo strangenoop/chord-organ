@@ -22,7 +22,7 @@ const Tone = ({
   detune?: number;
 }) => {
   useEffect(() => {
-    let osc = audioCtx.createOscillator();
+    const osc = audioCtx.createOscillator();
     osc.connect(masterGainNode);
     osc.type = waveform;
     osc.frequency.value = freq;

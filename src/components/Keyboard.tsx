@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Tones from "./Tones";
 import { compact } from "lodash";
-import { freq } from "frequencies/piano";
+import { key } from "frequencies/piano";
 import Circle from "./Circle";
 
 const Keyboard = () => {
@@ -33,7 +33,7 @@ const Keyboard = () => {
     <>
       <div
         style={{
-          color: "black"
+          color: "white"
         }}
       >
         <div>{keys}</div>
@@ -64,15 +64,25 @@ const getFreqFromKey = (key: string) => {
   return mapKeyToFreq[key] || null;
 };
 
+// prettier-ignore
 const mapKeyToFreq: { [key: string]: number } = {
-  a: freq(4, "c"),
-  s: freq(4, "d"),
-  d: freq(4, "e"),
-  f: freq(4, "f"),
-  g: freq(4, "g"),
-  h: freq(4, "a"),
-  j: freq(4, "b"),
-  k: freq(5, "c"),
-  l: freq(5, "d"),
-  ";": freq(5, "e")
+  n   : key(3, "ff"),
+  m   : key(3, "g"),
+  "," : key(3, "gg"),
+  "." : key(3, "a"),
+  "/" : key(3, "aa"),
+  h   : key(3, "b"),
+  j   : key(4, "c"),
+  k   : key(4, "cc"),
+  l   : key(4, "d"),
+  ";" : key(4, "dd"),
+  "'" : key(4, "e"),
+  y   : key(4, "f"),
+  u   : key(4, "ff"),
+  i   : key(4, "g"),
+  o   : key(4, "gg"),
+  p   : key(4, "a"),
+  "[" : key(4, "aa"),
+  "]" : key(4, "b"),
+  "\\": key(5, "c")
 };

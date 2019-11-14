@@ -11,7 +11,7 @@ export const fq = (distanceFromRoot: number) => {
   return rootFq * multiplier ** distanceFromRoot;
 };
 
-export const freq = (octave: number, note: Note) => {
+export const key = (octave: number, note: Note) => {
   const _ = 0;
   // prettier-ignore
   const octaves = [
@@ -76,7 +76,7 @@ export const freq = (octave: number, note: Note) => {
       cc: fq(4),
        d: fq(5),
       dd: fq(6),
-       e: fq(6),
+       e: fq(7),
        f: fq(8),
       ff: fq(9),
        g: fq(10),

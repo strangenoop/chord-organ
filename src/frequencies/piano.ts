@@ -11,7 +11,7 @@ export const fq = (distanceFromRoot: number) => {
   return rootFq * multiplier ** distanceFromRoot;
 };
 
-export const key = (octave: number, note: Note) => {
+export const key = (note: Note, octave: number) => {
   const _ = 0;
   // prettier-ignore
   const octaves = [
